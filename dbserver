@@ -1,0 +1,25 @@
+project_path = "$HOME/dbserver/"
+skynet_path = project_path.."skynet/"
+logpath = "$HOME/log/"
+
+thread = 2
+--logger = "login.log"
+logger = nil
+--日志级别设置(详见log.lua)
+logLevel = nil
+--监听端口
+listenPort = 8888
+--最大连接数
+maxConnections = 64
+--数据库地址
+dbHost = "192.168.1.45"
+--数据库端口
+dbPort = 27017
+harbor = 0
+start = "main"	-- main script
+bootstrap = "snlua bootstrap"	-- The service for bootstrap
+luaservice = skynet_path.."service/?.lua;"..project_path.."?.lua"
+lualoader = skynet_path.."lualib/loader.lua"
+lua_path = skynet_path.."lualib/?.lua;"..project_path.."?.lua"
+lua_cpath = skynet_path.."luaclib/?.so"
+cpath = skynet_path.."cservice/?.so"
