@@ -59,6 +59,10 @@ while true do
 	if cmd then
 		if cmd == "quit" then
 			break
+        elseif cmd == "getRealInfo" then
+            send_request("getRealInfo", 2079)
+        elseif cmd == "get_rewards" then
+            send_request("get_rewards", 428)
 		else
             if #cmd > 0 then
                 send_request("verify", cmd, "9bf5c0c1a7a95da6f8010d5e321e3e7b")
